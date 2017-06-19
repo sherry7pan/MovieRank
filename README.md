@@ -1,5 +1,4 @@
 # Movie Rank - A movie difficulty scorer for English learner
-## Sherry Pan
 
 
 ### Motivation
@@ -13,11 +12,11 @@ However, selecting a movie that matches the learner's current English level is n
 
 The goal of this capstone project is to build a scorer that rates English movie difficulty and extracts the keywords using various natural language processing techniques.
 
+
 ### Data
 ***
 
 The Movie Rank scorer was trained on the Cornell Movie-Dialogs Corpus which contains 220,579 conversational exchanges between 10,292 pairs of movie characters from 617 movies.
-
 
 
 ### Modelling
