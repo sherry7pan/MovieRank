@@ -1,4 +1,4 @@
-# Movie Rank - A movie difficulty scorer for English learner
+# Movie Rank - A Movie Difficulty scorer for English learner
 
 
 ### Motivation
