@@ -22,24 +22,20 @@ The Movie Rank scorer was trained on the Cornell Movie-Dialogs Corpus which cont
 
 ### Modelling
 ***
+There are no one specific way to measure language difficulty. Important hints include frequency of the words in everyday usages, context within sentences, and words senses in sematics.
 
-There are many aspects one could score the language difficulty such as vocabulary, sentence structure complexity,
+This scorer provides two scores as well as the keywords of the movie based on the converstaional exchanges from the dialogs corpus.
 
+Note: the model was trained on the movie corpus and provides a relative score and ranking. It's possible that an English learn may still find the easiest movie in the system challanging. The bottom line is that if a learner has to pick a movie to learn English from, it would be beneficial to start with the movies that has the relatively most frequency words and phrases used in daily conversation.
 
+1. vocabulary difficulty.
+The vocabulary difficulty score is provided using the N-gram class with n=1. The unigram will return how frequent the words in a specific movie occurs in the whole movie-dialog corpus.
 
-+ N-gram class
+2. phrases/sentence difficulty.
+This sentence difficulty score is provided using an ensemble language model class with several N-gram class and is optimized using iterative grid search approach.
 
-
-
-
-
-
-
-### Evaluation
-***
-
-+ 
-***
+3. keyword extractor.
+The keyword exractor utilized the tfidfvectorizer to provide keywords but not common words like a, an, the, me, you etc. of the movie so learner might focus on studying these keywords beforehand to better follow alond the movie.
 
 
-+ Build an interactive web app
+
