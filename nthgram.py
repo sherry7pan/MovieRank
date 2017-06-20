@@ -76,7 +76,7 @@ class Nthgram(object):
 
     def predict_perplexity(self,doc):
         """
-        returns the perplexity of a given document that is being normalized with its document length.
+        returns the perplexity(difficulty) score of a given document that is being normalized with its document length.
         """
         doc_lst = doc.split()
         prob_sum = 0
