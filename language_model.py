@@ -13,14 +13,13 @@ class Language_model(object):
     """
    
     def __init__(self,corpus,grid_weights=None):
-       
-        s
         self.unigram = Nthgram(1, corpus)
         self.bigram = Nthgram(2, corpus)
         self.trigram = Nthgram(3, corpus)
         self.fourthgram = Nthgram(4,corpus)
 
     def fit(self):
+        
         """ 
         traning the submodels to get frequency dictionaries.
         """
@@ -39,16 +38,17 @@ class Language_model(object):
                 last_weight = 1 - sum(ele)
                 temp= list(ele)
                 temp.append(last_weight)
-                self.grid_weights.append(tuple(temp)
-
-    def get_optimal_weight(self, corpus):
-        """
-        Takes the list of possible weight combination and give back the best performeing weight 
-        combination for the language model
-        """
-                                         
+                self.grid_weights.append(tuple(temp))
 
     def predict_perplexity(self,movie):
+        '''
+        INPUT:
+        - movie: dataFrame
+
+        Build the ensemble model to calculate a perplexity score that is used to rank the movie. 
+        returns a perplexity score.
+        '''
+        
         doc_lst = movie.split()
         prob_sum = 0
         for iter in xrange(3, len(doc_lst)):
