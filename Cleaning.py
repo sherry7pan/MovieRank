@@ -2,6 +2,10 @@ import pandas as pd
 
 
 def data_cleaning():
+    '''
+    This data cleaning process is used to tranform corpus's converstional data into format that could be feed into the algorithms.
+    It reads the original data set and returns a processed pandas dataframe.
+    '''
 
     characters = pd.read_table('movie_characters_metadata.txt',header=None,sep='\+\+\+\$\+\+\+',engine='python')
     characters.columns = ['character_index','character_name','movie_index','movie_name','gender','position of credits']
